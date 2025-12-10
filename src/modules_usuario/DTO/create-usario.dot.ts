@@ -1,6 +1,6 @@
-class CreateCatDTO {
+class CreateUsuarioDTO {
     nome: String;
     idade: number;
     senha: String;
 }
-export { CreateCatDTO };
+export { CreateUsuarioDTO };
