@@ -1,6 +1,6 @@
 import {Body, Controller, Get, Post} from '@nestjs/common';
 import { UsaurioService } from './usaurio.service';
-import { CreateCatDTO } from './DTO/craetCatDTO';
+import { CreateUsuarioDTO } from './DTO/create-usario.dot';
 import { Usuario } from './entities/usuario';
 
 @Controller('usuario')
@@ -9,8 +9,8 @@ import { Usuario } from './entities/usuario';
     constructor(private readonly usuarioService: UsaurioService) {}
 
     @Post()
-    createUsuario(@Body() createCatDTO: CreateCatDTO): Usuario {
-        return this.usuarioService.createUsuario(createCatDTO);
+    createUsuario(@Body() createUsuarioDTO: CreateUsuarioDTO): Usuario {
+        return this.usuarioService.createUsuario(createUsuarioDTO);
     }
     @Get('/user/all')
     getAllUsuarios(): Usuario[] {
