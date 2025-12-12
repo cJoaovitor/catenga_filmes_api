@@ -6,4 +6,5 @@ export class Filme {
     duracao: number;
     genero: String;
     urlImagem: String;
+    ClassificacaoIndicativa: String;
 }
