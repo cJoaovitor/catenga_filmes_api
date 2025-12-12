@@ -5,6 +5,7 @@ class CreateFilmeDTO {
     duracao: number;
     genero: String;
     urlImagem: String;
+    ClassificacaoIndicativa: String;
 }
 
 export { CreateFilmeDTO };

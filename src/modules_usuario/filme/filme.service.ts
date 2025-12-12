@@ -1,10 +1,12 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateFilmeDTO } from '../DTO/create-filme.dto';
 import { Filme } from 'src/modules_usuario/entities/filme';
+import { filmes } from 'src/modules_usuario/repositorio';
 
 @Injectable()
 export class filmeService {
-  private filmes: Filme[] = [];
+  private filmes: Filme[] = filmes;
+  private filmes2: Filme[] = filmes;
 
   constructor() {
     this.carregarFilmesIniciais();
@@ -79,7 +81,7 @@ export class filmeService {
   }
 
   getAllFilmes(): Filme[] {
-    return this.filmes;
+    return this.filmes2;
   }
 
   getFilmeById(id: number): Filme {

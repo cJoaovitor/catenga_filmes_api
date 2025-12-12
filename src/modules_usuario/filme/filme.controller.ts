@@ -11,11 +11,11 @@ export class FilmeController {
     createFilme(@Body() createFilmeDTO: CreateFilmeDTO): Filme {
         return this.filmeService.CreatUsuario(createFilmeDTO);
     }
-    @Get('filme/all')
+    @Get('all')
     getAllFilmes(): Filme[] {
         return this.filmeService.getAllFilmes();
     }
-    @Get('filme/:id')
+    @Get(':id')
     getFilmeById(@Param('id') id: number): Filme {
         return this.filmeService.getFilmeById(id);
     }

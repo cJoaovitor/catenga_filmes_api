@@ -11,6 +11,7 @@ export class farvoritoService {
             id: this.favoritos.length + 1,
             idFilme,
             idUsuario,
+            
         };
         this.favoritos.push(novoFavorito);
         return novoFavorito;
